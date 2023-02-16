@@ -1,15 +1,32 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <Main msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h4>{{ products[0] }}</h4>
+    <p>{{ price1 }}만원</p>
+  </div>
+  <div>
+    <h4>{{ products[1] }}</h4>
+    <p>{{ price2 }}만원</p>
+  </div>
+  <div>
+    <h4>{{ products[2] }}</h4>
+    <p>{{ price2 }}만원</p>
+  </div>
 </template>
 
 <script>
-import Main from './components/Main.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      products : ['역삼동원룸','천호동원룸','마포구원룸'],
+      price1 : 50,
+      price2 : '가격은아무거나'
+    }
+  },
   components: {
-    Main
+
   }
 }
 </script>
